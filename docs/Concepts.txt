@@ -1,0 +1,70 @@
+INTRODUÇÃO TEÓRICA
+
+Banco de dados: 
+
+* DBMS (Database Management System) / SGBD
+    SQL, mongoDB, Redis
+
+* RDBMS (Relational Database Management System) SGBDR
+    SQLite, MySql, PostgresSQl
+
+* SQL 
+    Structured Query Language. Linguagem de consulta estruturada.
+    exemplo: 
+
+        CREATE TABLE usuarios (id, nome, email);
+
+        INSERT INTO usuarios (id, nome, email)
+        VALUES (1, 'André', 'andre@origamid.coim');
+
+        SELECT * FROM usuarios;
+
+
+* SQLite
+    https://sqlite.org 
+    Vantagens: 
+
+    -> Não precisa configurar
+    -> Rápido, simples e estável
+    -> Instalado em mais de 1 trilhão de dispositivos
+    -> 90% parecido com o outros SQL
+
+* Outros SQL
+    Existem outras implementações do SQL. Essas implementações dependem de uma 
+    configuração/instalação inicial de um serviço/servidor que será utilizado para ser conectado com o Back End.
+
+    -> MySQL
+    -> MariaDB
+    -> PostgreSQL
+
+    Cada SQL tem uma usabilidade para algo expecifico!
+
+-------------------------------------------------------------------------------------------------------------------------
+
+* CREATE TABLE
+    Cria uma tabela cursos e define as colunas (id, nome, aulas): 
+
+    Sempre coloque o ; no final da instrução SQL.
+
+    -> CREATE TABLE cursos (id, nome, aulas);
+
+* DROP TABLE
+    Remove uma tabela
+
+    -> DROP TABLE cursos;
+
+* Definição de Tipos de Dados: 
+    Define o tipo de dado da coluna e restrições (constraints)
+
+    CREATE TABLE cursos (
+        id INTEGER NOT NULL, // inteiro, não nulo
+        nome TEXT NOT NULL, // texto, não nulo
+        aulas INTEGEr // inteiro 
+    );
+
+    # no caso o INTEGER é o tipo do atributo e o NOT NULL é uma restrição (constraint)
+
+* Checar tabela: 
+    Verifica as características da tabela cursos
+
+    -> PRAGMA TABLE_INFO('cursos');
