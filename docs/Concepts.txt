@@ -68,3 +68,38 @@ Banco de dados:
     Verifica as características da tabela cursos
 
     -> PRAGMA TABLE_INFO('cursos');
+
+-------------------------------------------------------------------------------------------------------------------------
+
+* SELECT
+    no comando SELECT * FROM cursos; o '*' serve para indicar que estamos selecionando todas as colunas da tabela.
+
+    SELECT como o proprio nome já diz, serve para selecionar algo na nossa tabela
+
+* Uso de Aspas 
+    Aspas simples '' são usadas para strings, aspas duplas "" para identificadores como 
+    nomes de colunas ou tabelas. Números são definidos sem aspas.
+
+    Podemos omitir as aspas duplas para nomes de colunas e tabelas, mas é uma boa prática usá-las 
+    para evitar conflitos com palavras reservadas/chave (keywords).
+
+    -> INSERT INTO "cursos" ("id", "nome", "aulas") VALUES (1, 'HTML', 10);
+
+* Indentação 
+    No SQLite a Indentação é opcional, mas usamos para ajudar na legibilidade 
+
+    INSERT INTO
+        "cursos" ("id", "nome", "aulas")
+    VALUES
+        (1, 'HTML', 10);
+
+* Multiplos registros
+    Insere múltiplos registros/dados na tabela cursos
+
+    INSERT INTO
+        "cursos" ("id", "nome", "aulas")
+    VALUES
+        (2, 'CSS', 12),
+        (3, 'JavaScript', 15);
+
+
