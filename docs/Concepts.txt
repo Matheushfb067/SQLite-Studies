@@ -117,5 +117,22 @@ Banco de dados:
     
     ->DELETE FROM "cursos" WHERE "id" = 1;
  
+-------------------------------------------------------------------------------------------------------------------------
+
+* SELECT
+    Entraremos mais a fundo sobre como funciona o comando SELECT. 
+
+    Seleciona as colunas "id", "nome" da tabela cursos diferentemente do *que seleciona todas as colunas da tabela.
+
+    -> SELECT "id", "nome" FROM "cursos";
+
+    -> SELECT * FROM "cursos";
+
+* LIMIT
+    Limita o número de linhas retornadas pela consulta. Sem o limit se o meu código tiver 
+    um milhão de linhas, todas elas serão retornadas, já com ele, podemos limitar a quantidade
+    de linhas que eu quero exibir
+
+    -> SELECT * FROM "cursos" LIMIT 2;
 
 
