@@ -102,4 +102,20 @@ Banco de dados:
         (2, 'CSS', 12),
         (3, 'JavaScript', 15);
 
+-------------------------------------------------------------------------------------------------------------------------
+
+* DELETE
+    Deleta todas as linhas da tabela (muito pouco utilizado e geralmente utilizado com condições que implicam na deleção)
+
+    -> DELETE FROM "cursos";
+
+* WHERE 
+    Where é um comando condicional no SQLite é usado para filtrar registros de uma tabela, retornando apenas as linhas que 
+    atendem a uma condição específica.
+
+    Deleta as linhas da tabela cursos onde o id é igual a 1: 
+    
+    ->DELETE FROM "cursos" WHERE "id" = 1;
+ 
+
 
