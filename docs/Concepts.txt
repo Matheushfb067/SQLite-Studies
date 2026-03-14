@@ -163,7 +163,7 @@ Banco de dados:
     -> condicional.
 
     o comando SET serve para indicar para o SQLite a coluna que desejamos atualizar!
-    
+
     sempre fazer o update acompanhado de WHERE para indicar a condição de onte se deseja
     atualizar, caso contrario todas as linhas serão atualizadas!
 

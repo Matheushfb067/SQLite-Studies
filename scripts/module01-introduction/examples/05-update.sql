@@ -1,4 +1,4 @@
--- database: ../database/05-update.sqlite
+-- database: ../../../database/module01-introduction/examples/05-update.sqlite
 
 CREATE TABLE cursos (
     id INT NOT NULL,

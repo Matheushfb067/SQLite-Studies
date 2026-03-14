@@ -1,4 +1,4 @@
--- database: ../database/04-select-condicionais.sqlite
+-- database: ../../../database/module01-introduction/examples/04-select-condicionais.sqlite
 
 CREATE TABLE cursos (
     id INT NOT NULL,

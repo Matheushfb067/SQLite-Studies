@@ -1,4 +1,4 @@
--- database: ../database/03-delete-where.sqlite
+-- database: ../../../database/module01-introduction/examples/02-select-insert.sqlite
 
 CREATE TABLE cursos (
     id INTEGER NOT NULL,
@@ -6,13 +6,11 @@ CREATE TABLE cursos (
     aulas INTEGER
 );
 
+PRAGMA TABLE_INFO ('cursos'); 
+
 SELECT * FROM cursos;
 
 INSERT INTO cursos (id, nome, aulas) VALUES 
 (1, 'HTML', 10),
 (2, 'JS', 15),
 (3, 'CSS', 20);
-
-DELETE FROM "cursos" WHERE "id" = 1;
-
-DELETE FROM "cursos" WHERE "nome" = 'CSS';

@@ -1,4 +1,4 @@
--- database: ../database/01-create-tables.sqlite
+-- database: ../../../database/module01-introduction/examples/01-create-tables.sqlite
 
 CREATE TABLE cursos (id, nome, aulas);
 
