@@ -1,0 +1,46 @@
+-- database: ../../../database/module01-introduction/exercises/ex01.sqlite
+
+CREATE TABLE produtos (
+    id INT NOT NULL,
+    nome TEXT NOT NULL,
+    preco INT NOT NULL
+);
+
+INSERT INTO 
+    "produtos" ("id", "nome", "preco")
+VALUES
+    (1, 'Notebook', 1000),
+    (2, 'Smartphone', 500),
+    (3, 'Tablet', 300);
+
+CREATE TABLE clientes (
+    id INT NOT NULL,
+    nome TEXT NOT NULL,
+    email TEXT NOT NULL
+);
+
+INSERT INTO 
+    "clientes" ("id", "nome", "email")
+VALUES 
+    (1, 'Maria', 'maria@email.com'),
+    (2, 'João', 'joao@email.com');
+
+CREATE TABLE compras (
+    id INT NOT NULL,
+    cliente_id INT NOT NULL,
+    produto_id INT NOT NULL,
+    data TEXT NOT NULL
+);
+
+INSERT INTO 
+    "compras" ("id", "cliente_id", "produto_id", "data")
+VALUES
+    (1, 2, 1, '2049-01-01'),
+    (2, 1, 2, '2049-01-02'),
+    (3, 2, 3, '2049-01-03');
+
+SELECT * FROM "produtos";
+
+SELECT "nome" FROM "produtos" WHERE preco > 400;
+
+SELECT * FROM "compras" WHERE cliente_id = 2;
