@@ -19,3 +19,8 @@ SELECT "id", "nome" FROM "cursos"; -- mostra somente os ids e nomes dentro da ta
 
 SELECT * FROM "cursos" LIMIT 2; -- Limita o número de linhas retornadas pela consulta.
 
+SELECT "id", "nome" FROM "cursos" WHERE id = 2;
+
+SELECT * FROM "cursos" WHERE nome = 'JS';
+
+SELECT * FROM "cursos" WHERE id = 1 OR aulas > 11; 
