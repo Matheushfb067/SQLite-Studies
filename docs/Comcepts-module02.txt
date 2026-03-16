@@ -45,7 +45,31 @@
     para o tipo TEX, DOUBLE/FLOAT para o tipo REAL, DATE/DATETIME/DECIMAL para o tipo Numeric, 
     entre outros...
 
-    ----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+
+* Strict 
+    No modo strict, o SQLite impõe regras mais rígidas sobre os tipos de dados.
+
+    -> CREATE TABLE -> Só permite tipos de dados especificos, caso contrario retorna um erro na tabela.
+
+    -> INSERT -> quando inserimos o dados, ele terá que ser exatamente do tipo que foi definido no create
+    caso contrario retornará um erro.
 
 
+* Tipos de Dados (STRICT)
+    SQLite no modo strict aceita a criação de tabelas com os seguintes tipos de dados:
 
+    INT -> Números inteiros (só se diferencia do integer na criação de chaves primarias -> assunto 
+    posterior)
+
+    INTEGER -> Números inteiros
+
+    TEXT -> Texto
+
+    REAL -> Números flutuantes
+
+    BLOB -> Dados binários
+
+    ANY -> Qualquer tipo de dado
+
+----------------------------------------------------------------------------------------------------------
