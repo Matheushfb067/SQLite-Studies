@@ -73,3 +73,19 @@
     ANY -> Qualquer tipo de dado
 
 ----------------------------------------------------------------------------------------------------------
+
+* PRIMARY KEY
+    Define uma coluna como chave primária, que deve ser única e não nula. É como uma 
+    identificação do campo quando o mesmo deve ser especifico somente daquele atributo.
+
+* RowId
+    Toda tabela tem uma coluna oculta chamada rowid, que é um identificador único para cada linha.
+
+    Se você não definir uma chave primária, o SQLite cria automaticamente uma coluna rowid.
+
+    Se você definir uma coluna como INTEGER PRIMARY KEY, ela se torna um alias para a coluna rowid, isso 
+    não acontee caso use INT.
+
+----------------------------------------------------------------------------------------------------------
+
+
