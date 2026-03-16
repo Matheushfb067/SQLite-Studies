@@ -1,7 +1,7 @@
 -- database: ../../../database/module01-introduction/exercises/ex01.sqlite
 
 CREATE TABLE produtos (
-    id INT NOT NULL,
+    id INTEGER NOT NULL,
     nome TEXT NOT NULL,
     preco INT NOT NULL
 );
@@ -14,7 +14,7 @@ VALUES
     (3, 'Tablet', 300);
 
 CREATE TABLE clientes (
-    id INT NOT NULL,
+    id INTEGER NOT NULL,
     nome TEXT NOT NULL,
     email TEXT NOT NULL
 );
@@ -26,9 +26,9 @@ VALUES
     (2, 'João', 'joao@email.com');
 
 CREATE TABLE compras (
-    id INT NOT NULL,
-    cliente_id INT NOT NULL,
-    produto_id INT NOT NULL,
+    id INTEGER NOT NULL,
+    cliente_id INTEGER NOT NULL,
+    produto_id INTEGER NOT NULL,
     data TEXT NOT NULL
 );
 

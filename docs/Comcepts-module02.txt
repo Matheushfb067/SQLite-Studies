@@ -1,0 +1,51 @@
+* Tipos de dados
+    INTEGER -> Armazena números inteiros (boolean (0,1), timestamp) 
+
+    TEXT -> Armazena textos (strings, datas, json)
+
+    obs: INTEGER e TEXT são os tipos de dados mais comuns do SQLite!
+
+    REAL -> Números reais/flutuantes (com vírgula)
+
+    BLOB -> Dados binarios (pouco usado!)
+
+    NULL -> Valor nulo (quando iniciamos um campo com valor nenhum)
+
+* Dados no SQLite
+    Existem 3 momentos cruciais em que o SQLite lida com tipos de dados:
+
+    Definição de Tabelas -> Definir o tipo de dado da coluna.
+
+    Inserção de Dados -> Converte o dado para o tipo de acordo com a afinidade da coluna.
+
+    Consulta de Dados -> Retorna o valor armazenado.
+
+* Afinidade de Tipo
+
+    SQLite não impõe tipos de dados estritos, mas sim uma afinidade de tipo. Isso significa 
+    que você pode armazenar qualquer tipo de dado em qualquer coluna, mas o SQLite tentará 
+    converter os dados para o tipo mais apropriado, de acordo com a afinidade da coluna.
+
+    São 5 tipos de afinidade:
+
+    TEXT -> Texto
+
+    INTEGER -> Números inteiros
+
+    REAL -> Números flutuantes
+
+    BLOB -> Dados binários
+
+    NUMERIC -> Números inteiros ou flutuantes   
+
+    Isso significa que por convenção a linguagem, quando digitado por exemplo INT como o tipo 
+    de um dado a linguagem automaticamente associa isso ao tipo INTEGER, então mesmo que eu use
+    o tipo INT esse atributo será do tipo INTEGER para o SQLite, o mesmo ocorre para os tipos 
+    listados acima. Exemplos: usar, INT/SMALLINT/TINYINT para o tipo INTEGER, CHARACTER/VARCHAR 
+    para o tipo TEX, DOUBLE/FLOAT para o tipo REAL, DATE/DATETIME/DECIMAL para o tipo Numeric, 
+    entre outros...
+
+    ----------------------------------------------------------------------------------------------------------
+
+
+
