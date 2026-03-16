@@ -27,3 +27,11 @@ SELECT typeof("preco") FROM produtos;
 SELECT typeof("descricao") FROM produtos;
 
 SELECT typeof("data_criacao") FROM produtos;
+
+/* O exemplo abaixo atesta ainda mais a afinidade entre tipos, pois mesmo os inteiros sendo inseridos 
+com strings, eles são entendidos pela linguagem como integer*/
+
+INSERT INTO
+  "produtos" ("id", "descontinuado", "nome", "preco", "descricao", "data_criacao")
+VALUES
+  ('1', '0', 999, '200.50', 100, 2049);
