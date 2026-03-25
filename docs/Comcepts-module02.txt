@@ -88,4 +88,33 @@
 
 ----------------------------------------------------------------------------------------------------------
 
+* FOREIGN KEY
+    Estabelece uma relação entre tabelas, garantindo a integridade referencial.
+    
+    Imagine que temos as tabelas cursos e aulas, toda aula pertence a algum curso portanto
+    dentro da tabela de aulas precisaremos de um atributo que referencie o id da tabela cursos
+    por meio do comando: 
+
+    -> FOREIGN KEY("curso_id") REFERENCES "cursos" ("id")
+
+    Enquanto eu posso tem apenas uma chave primaria por tabela, eu posso ter diversas chaves estrangeiras.
+
+* DROP TABLE (FK)
+    Para remover uma tabela que possui chaves estrangeiras, você deve primeiro remover as tabelas dependentes.
+    Cria uma nova restrição, ou seja não me deixa remover a tabela se em outra tabela tiver uma dependencia de 
+    outra por meio da FOREIGN KEY.
+
+    -> DROP TABLE "cursos"; -- Falha se "aulas" existir por conta de dentro da tabela aulas haver a foreign key 
+    para a tabela cursos
+
+    De forma resumida, uma tabela depende da outra, sendo assim se quisermos deletar uma, primeiro devemos deletar 
+    a outra.
+
+* CASCADE 
+    Use o CASCADE para remover/atualizar automaticamente as linhas dependentes ao remover/atualizar uma linha 
+    referenciada. De modo mais direto, permite eu deletar os elementos da tabela mesmo com uma foreign key 
+    conectando elas.
+
+----------------------------------------------------------------------------------------------------------
+
 
