@@ -181,3 +181,23 @@
         -> CHECK ("vitalicio" IN (0, 1)) -- Verifica se o valor é 0 ou 1
         -> CHECK ("preco" > 0) -- Verifica se o preço é maior que 0
 
+----------------------------------------------------------------------------------------------------------
+
+* Normalização: 
+    A normalização é o processo de organizar os dados para reduzir redundâncias e dependências, dividindo 
+    tabelas em entidades menores. São diferentes formas normais (FN) que ajudam a estruturar os dados de 
+    forma eficiente.
+
+    Primeira Forma Normal (1FN): 
+        Elimina grupos repetitivos e garante que cada coluna contenha valores atômicos.
+
+    Segunda Forma Normal (2FN):
+        Elimina dependências parciais em chaves compostas.
+
+    Terceira Forma Normal (3FN):
+        Elimina dependências transitivas, garantindo que não haja atributos que dependam de outros atributos 
+        não-chave.
+
+----------------------------------------------------------------------------------------------------------
+
+
