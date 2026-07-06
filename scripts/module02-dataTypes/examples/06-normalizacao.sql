@@ -78,3 +78,27 @@ CREATE TABLE "certificados" (
 
 -- 3FN:
 
+-- não normalizado (3FN)
+CREATE TABLE "usuarios" (
+  "id" INTEGER PRIMARY KEY,
+  "nome" TEXT,
+  "tipo" TEXT CHECK ("tipo" IN ('usuario', 'admin')),
+  "tipo_leitura" INTEGER CHECK ("tipo_leitura" IN (0, 1)),
+  "tipo_escrita" INTEGER CHECK ("tipo_escrita" IN (0, 1))
+) STRICT;
+
+
+-- normalizado (3FN)
+CREATE TABLE "usuarios" (
+  "id" INTEGER PRIMARY KEY,
+  "nome" TEXT,
+  "tipo_id" INTEGER,
+  FOREIGN KEY ("tipo_id") REFERENCES "tipos" ("id")
+) STRICT;
+
+CREATE TABLE "tipos" (
+  "id" INTEGER PRIMARY KEY,
+  "tipo" TEXT UNIQUE,
+  "leitura" INTEGER CHECK ("leitura" IN (0, 1)),
+  "escrita" INTEGER CHECK ("escrita" IN (0, 1))
+) STRICT;
