@@ -50,3 +50,36 @@
         SELECT * FROM "produtos" WHERE "lancamento" IS TRUE;
         SELECT * FROM "produtos" WHERE "lancamento" IS FALSE;
 
+-----------------------------------------------------------------------------------------
+    Operador Like: 
+
+    O operador LIKE é usado para comparar padrões em strings. Por padrão ele não é 
+    sensível a maiúsculas e minúsculas.
+
+        SELECT * FROM "produtos" WHERE "nome" LIKE 'impressora 3d mini';
+
+    Porém o poder do LIKE não está no uso simples mostrado no exemplo acima e sim nos
+    caracteres coringas ou Wildcards que são caracteres especiais usados em conjunto 
+    com o LIKE para realizar a busca de padrões dentro de textos em vez de procurar uma
+    correspondencia exata: 
+
+    Wildcard (%): 
+        %: Representa zero ou mais caracteres.
+
+            -- Encontra produtos que começam com "notebook"
+            SELECT * FROM "produtos" WHERE "nome" LIKE 'notebook%';
+            -- Encontra produtos que terminam com "pro"
+            SELECT * FROM "produtos" WHERE "nome" LIKE '%pro';
+            -- Encontra produtos que têm "3d" no meio do nome
+            SELECT * FROM "produtos" WHERE "nome" LIKE '%3d%';
+
+    Wildcard (_):
+        _: Representa exatamente um caractere.
+
+            -- Encontra produtos com 1 caractere antes de "TB"
+            SELECT * FROM "produtos" WHERE "nome" LIKE '% _TB%';
+
+            serve para encontrar algo especifico que tenha exclusivamente TB no final 
+            contendo um caractere antes porem sem expecifica-lo.
+
+
